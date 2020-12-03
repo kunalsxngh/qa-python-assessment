@@ -220,7 +220,7 @@ def six(input1):
 	else:
 		return True
 
-		
+
 	# <QUESTION 7>
 
     # Write a function which returns the integer number of vowels in a given string. 
@@ -235,8 +235,14 @@ def six(input1):
 
 	# How do we ignore case in a String? help(str) may offer some insight.
 
-def seven(input):
-    return 0
+def seven(input1):
+	input1 = input1.lower()
+	sum1 = 0
+	for char in input1:
+		if char in "aeiou":
+			sum1 += 1 
+			
+	return sum1
 
 	# <QUESTION 8>
 
@@ -253,8 +259,10 @@ def seven(input):
 
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
-def eight(input):
-	return 1
+def eight(input1):
+	if(input1 == 1):
+		return 1
+	return input1 * eight(input1-1)
 
 	# <QUESTION 9>
 
@@ -275,7 +283,10 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-	return -1
+	inputString = " " + inputString.replace(" ", "")
+
+	return inputString.find(char)
+
 
 	# <QUESTION 10>
 
@@ -294,5 +305,5 @@ def nine(inputString, char):
 
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
-def ten(string, int, char):
-	return False
+def ten(string1, int1, char1):
+	return string1.lower().find(char1) + 1 == int1
